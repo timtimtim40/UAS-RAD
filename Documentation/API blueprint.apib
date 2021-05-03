@@ -1,0 +1,228 @@
+FORMAT: 1A
+HOST: http://localhost:3000/api
+
+# Sales Data
+
+
+# Group Customer
+
+## Customers [/customers/]
+
+### Customers [GET]
+
++ Response 200 
+
+
+
+## GET Customer by ID [/customers/{id}]
+
++ Parameters
+
+	+ id (string, required)
+
+### Customer [GET]
+
++ Response 200 
+
+
+## DELETE Customer by ID [/customers/{id}]
+
++ Parameters
+
+	+ id (string, required)
+
+### Delete [DELETE]
+
++ Response 200 
+
+
+
+## Customers [/customers]
+
+### Create [POST]
+
++ Request (application/json)
+
+    + Attributes (CreateRequest)
+
+
+    + Body
+
+            {
+                "firstname": "Marco",
+                "lastname": "Kolib",
+                "age": 25,
+                "id": 5
+            }
+
+
++ Response 200 
+
+
+
+## UPDATE Customer by ID [/customers/{id}]
+
++ Parameters
+
+	+ id (string, required)
+
+### Update [PUT]
+
++ Request (application/json)
+
+    + Attributes (UpdateRequest)
+
+
+    + Body
+
+            {
+                "firstname": "Marco",
+                "lastname": "Jojo",
+                "age": 22,
+                "id": 2
+            }
+
+
++ Response 200 
+
+
+
+
+
+# Group Item
+
+## Item [/item]
+
+### Items [GET]
+
++ Response 200 
+
+
+
+### Create [POST]
+
++ Request (application/json)
+
+    + Attributes (CreateRequest1)
+
+
+    + Body
+
+            {
+                "name": "Taro",
+                "itemtype": "Snack",
+                "expirydate": "17-12-2021",
+                "id": 5
+            }
+
+
++ Response 200 
+
+
+
+
+## Item 2 [/item/2]
+
+### Item [GET]
+
++ Response 200 
+
+
+
+
+## Item 5 [/item/5]
+
+### Update [PUT]
+
++ Request (application/json)
+
+    + Attributes (UpdateRequest1)
+
+
+    + Body
+
+            {
+                "name": "Pola",
+                "itemtype": "Snack",
+                "expirydate": "12-12-2021",
+                "id": 5
+            }
+
+
++ Response 200 
+
+
+
+
+## Item 4 [/item/4]
+
+### Delete [DELETE]
+
++ Response 200 
+
+
+
+
+
+# Group Sales
+
+## Sales [/sales]
+
+### Sales [GET]
+
++ Response 200 
+
+
+
+
+## Sale 1 [/item/1]
+
+### Sale [GET]
+
++ Response 200 
+
+
+
+
+
+# Data Structures
+
+## CreateRequest (object)
+
+
+### Properties
++ `firstname` (string, required) 
++ `lastname` (string, required) 
++ `age` (number, required) 
++ `id` (number, required) 
+
+
+## UpdateRequest (object)
+
+
+### Properties
++ `firstname` (string, required) 
++ `lastname` (string, required) 
++ `age` (number, required) 
++ `id` (number, required) 
+
+
+## CreateRequest1 (object)
+
+
+### Properties
++ `name` (string, required) 
++ `itemtype` (string, required) 
++ `expirydate` (string, required) 
++ `id` (number, required) 
+
+
+## UpdateRequest1 (object)
+
+
+### Properties
++ `name` (string, required) 
++ `itemtype` (string, required) 
++ `expirydate` (string, required) 
++ `id` (number, required) 
+
